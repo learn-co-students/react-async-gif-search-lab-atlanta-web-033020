@@ -12,7 +12,7 @@ class GifListContainer extends React.Component {
       .then(response => response.json())
       .then(data => {
         this.setState({
-          urls: data.data.map(d => d.url)
+          urls: data.data.map(d => d.images.original.url)
         });
       });
   }
